@@ -1,0 +1,88 @@
+name: Master
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+    # types: [opened]
+jobs:
+  test:
+    name: Test application
+    if: ${{ github.event.on.pull_request }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Cache node packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Setup node ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install packages
+        run: npm install
+      - name: Build project
+        run: npm run build
+      - name: Create documentation
+        run: npm run docs
+  build:
+    name: Build project
+    if: ${{ github.event.on.push }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Cache node packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Setup node ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install packages
+        run: npm install
+      - name: Build project
+        run: npm run build
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: site-dist
+          path: ./dist
+          retention-days: 1
+  deploy:
+    name: Deploy project to test server
+    if: ${{ github.event.on.pull_request }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts from build
+        uses: actions/download-artifact@v2
+        with:
+          name: site-dist
+      - name: ls
+        run: ls
+      - name: Deploying to server
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: ${{ secrets.DEPLOY_TEST_SWITCHES }}
+          path: ${{ secrets.DEPLOY_PRODUCTION_PATH }}
+          remote_path: ${{ secrets.DEPLOY_PRODUCTION_REMOTE_PATH }}
+          remote_host: ${{ secrets.DEPLOY_PRODUCTION_HOST }}
+          remote_port: ${{ secrets.DEPLOY_PRODUCTION_PORT }}
+          remote_user: ${{ secrets.DEPLOY_PRODUCTION_USER }}
+          remote_key: ${{ secrets.DEPLOY_PRODUCTION_KEY }}

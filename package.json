@@ -14,7 +14,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-postbuild": "ng build --aot --prod",
-    "compodoc": "compodoc -p tsconfig.json"
+    "docs": "compodoc -p tsconfig.json"
   },
   "private": true,
   "engines": {
@@ -26,7 +26,7 @@
     "@angular/common": "~10.2.0",
     "@angular/compiler": "~10.2.0",
     "@angular/core": "~10.2.0",
-    "@angular/forms": "~10.2.0",
+    "@angular/forms": "^10.2.4",
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
