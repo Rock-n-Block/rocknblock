@@ -1,0 +1,36 @@
+$scheme-icons: (('link', 'link', 'svg'), ('link', 'link', 'svg'));
+$scheme-icons-mask: (('coins-green', 'coins', 'svg'), ('coins-green', 'coins', 'svg'));
+
+// @include theme('dark', $scheme-icons);
+@include theme('white', $scheme-icons);
+@include theme-mask($scheme-icons-mask);
+
+.icon {
+  &:before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &-flex {
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+
+  &-link {
+    @include before-img(block, 15px, 10px, r) {
+      background-size: cover;
+    }
+  }
+
+  &-coins-green {
+    @include before-img(block, 26px, 19px, r) {
+      background-color: var(--icon-coins-green-background-color);
+    }
+  }
+}

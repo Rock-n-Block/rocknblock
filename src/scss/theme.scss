@@ -1,0 +1,31 @@
+// default theme (white)
+:root {
+  --body-background-color: #f3f3f3;
+
+  --header-background-color: #ffffff;
+  --header-box-shadow: 0px 4px 25px rgba(211, 224, 219, 0.25);
+
+  --section-title-color: #59bfa4;
+
+  --icon-coins-gray-background-color: #979797;
+  --icon-coins-green-background-color: #59bfa4;
+  --icon-info-gray-background-color: #b0b0b0;
+  --icon-info-orange-background-color: #ec8c50;
+}
+
+//dark theme
+#dark {
+  body {
+    --body-background-color: #f3f3f3;
+
+    --header-background-color: #ffffff;
+    --header-box-shadow: 0px 4px 25px rgba(211, 224, 219, 0.25);
+
+    --section-title-color: #59bfa4;
+
+    --icon-coins-gray-background-color: #979797;
+    --icon-coins-green-background-color: #59bfa4;
+    --icon-info-gray-background-color: #b0b0b0;
+    --icon-info-orange-background-color: #ec8c50;
+  }
+}
