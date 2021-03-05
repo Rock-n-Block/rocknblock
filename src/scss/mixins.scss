@@ -175,7 +175,7 @@
   @each $className, $iconPath, $iconType in $icons {
     .icon-#{$className} {
       &:before {
-        mask: url('../assets/img/icons/mask/icon-#{$iconPath}-mask.#{$iconType}') no-repeat 100% 100%;
+        mask: url('../assets/img/icons/mask/icon-#{$iconPath}.#{$iconType}') no-repeat 100% 100%;
       }
     }
   }

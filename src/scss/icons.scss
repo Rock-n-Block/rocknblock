@@ -1,5 +1,48 @@
-$scheme-icons: (('link', 'link', 'svg'), ('link', 'link', 'svg'));
-$scheme-icons-mask: (('coins-green', 'coins', 'svg'), ('coins-green', 'coins', 'svg'));
+$scheme-icons: (
+  ('facebook', 'facebook', 'svg'),
+  ('mail', 'mail', 'svg'),
+  ('telegram', 'telegram', 'svg'),
+  ('linkedin', 'linkedin', 'svg'),
+  ('rocket', 'rocket', 'svg'),
+  ('arrow-circle-left', 'arrow-circle-left', 'svg'),
+  ('arrow-circle-right', 'arrow-circle-right', 'svg'),
+  ('different-flash', 'different-flash', 'svg'),
+  ('different-lines', 'different-lines', 'svg'),
+  ('different-circle', 'different-circle', 'svg'),
+  ('different-arrow', 'different-arrow', 'svg'),
+  ('different-rocket', 'different-rocket', 'svg'),
+  ('different-graph', 'different-graph', 'svg'),
+  ('technologies-c', 'technologies-c', 'svg'),
+  ('technologies-el', 'technologies-el', 'svg'),
+  ('technologies-rust', 'technologies-rust', 'svg'),
+  ('technologies-snow', 'technologies-snow', 'svg'),
+  ('technologies-typescript', 'technologies-typescript', 'svg'),
+  ('technologies-x', 'technologies-x', 'svg'),
+  ('arrow-small', 'arrow-small', 'svg')
+);
+$scheme-icons-mask: (
+  ('arrow-long', 'arrow-long', 'svg'),
+  ('areas-blockchain', 'areas-blockchain', 'svg'),
+  ('areas-fintech', 'areas-fintech', 'svg'),
+  ('areas-machine-learning', 'areas-machine-learning', 'svg'),
+  ('areas-software', 'areas-software', 'svg'),
+  ('areas-things', 'areas-things', 'svg'),
+  ('partner-axion', 'partner-axion', 'svg'),
+  ('partner-binence', 'partner-binence', 'svg'),
+  ('partner-bw', 'partner-bw', 'svg'),
+  ('partner-changelly', 'partner-changelly', 'svg'),
+  ('partner-ducatus', 'partner-ducatus', 'svg'),
+  ('partner-enq', 'partner-enq', 'svg'),
+  ('partner-eos', 'partner-eos', 'svg'),
+  ('partner-lancor', 'partner-lancor', 'svg'),
+  ('partner-neo', 'partner-neo', 'svg'),
+  ('partner-okex', 'partner-okex', 'svg'),
+  ('partner-quras', 'partner-quras', 'svg'),
+  ('partner-rsk', 'partner-rsk', 'svg'),
+  ('partner-teambrella', 'partner-teambrella', 'svg'),
+  ('partner-tron', 'partner-tron', 'svg'),
+  ('partner-waves', 'partner-waves', 'svg')
+);
 
 // @include theme('dark', $scheme-icons);
 @include theme('white', $scheme-icons);
@@ -22,15 +65,259 @@ $scheme-icons-mask: (('coins-green', 'coins', 'svg'), ('coins-green', 'coins', '
     width: max-content;
   }
 
-  &-link {
-    @include before-img(block, 15px, 10px, r) {
+  // icons
+  &-facebook {
+    @include before-img(block, 7.5px, 16.5px, r) {
       background-size: cover;
     }
   }
 
-  &-coins-green {
-    @include before-img(block, 26px, 19px, r) {
-      background-color: var(--icon-coins-green-background-color);
+  &-mail {
+    @include before-img(block, 12.5px, 10px, r) {
+      background-size: cover;
+    }
+  }
+
+  &-telegram {
+    @include before-img(block, 19.5px, 17px, r) {
+      background-size: cover;
+    }
+  }
+
+  &-linkedin {
+    @include before-img(block, 15px, 14.5px, r) {
+      background-size: cover;
+    }
+  }
+
+  &-rocket {
+    @include before-img(block, 18px, 18px, r) {
+      background-size: cover;
+    }
+  }
+
+  &-arrow-circle-left {
+    @include before-img(block, 44px, 44px, r) {
+      background-size: cover;
+    }
+  }
+
+  &-arrow-circle-right {
+    @include before-img(block, 44px, 44px, r) {
+      background-size: cover;
+    }
+  }
+
+  &-arrow-small {
+    @include before-img(block, 30px, 16px, r) {
+      background-size: cover;
+    }
+  }
+
+  &-technologies {
+    &-snow {
+      @include before-img(block, 100px, 100px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-el {
+      @include before-img(block, 100px, 100px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-rust {
+      @include before-img(block, 100px, 100px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-c {
+      @include before-img(block, 100px, 100px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-typescript {
+      @include before-img(block, 100px, 100px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-x {
+      @include before-img(block, 100px, 100px, r) {
+        background-size: contain;
+      }
+    }
+  }
+
+  &-different {
+    &-flash {
+      @include before-img(block, 44px, 44px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-lines {
+      @include before-img(block, 44px, 44px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-circle {
+      @include before-img(block, 44px, 44px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-arrow {
+      @include before-img(block, 44px, 44px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-rocket {
+      @include before-img(block, 44px, 44px, r) {
+        background-size: contain;
+      }
+    }
+
+    &-graph {
+      @include before-img(block, 44px, 44px, r) {
+        background-size: contain;
+      }
+    }
+  }
+
+  // mask
+  &-arrow-long {
+    @include before-img(block, 66px, 27px, r) {
+      background-color: var(--icon-arrow-long-background-color);
+    }
+  }
+
+  &-partner {
+    &-axion {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-binence {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-bw {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-changelly {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-ducatus {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-enq {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-eos {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-lancor {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-neo {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-okex {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-quras {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-rsk {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-teambrella {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-tron {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-waves {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+  }
+
+  &-areas {
+    &-blockchain {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-blockchain-background);
+      }
+    }
+
+    &-fintech {
+      @include before-img(block, 70px, 80px, r) {
+        background: var(--icon-areas-fintech-background);
+      }
+    }
+
+    &-software {
+      @include before-img(block, 80px, 80px, r) {
+        background: var(--icon-areas-software-background);
+      }
+    }
+
+    &-machine-learning {
+      @include before-img(block, 70px, 80px, r) {
+        background: var(--icon-areas-machine-learning-background);
+      }
+    }
+
+    &-things {
+      @include before-img(block, 65px, 80px, r) {
+        background: var(--icon-areas-things-background);
+      }
     }
   }
 }

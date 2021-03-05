@@ -1,0 +1,201 @@
+<section class="section section-head">
+  <div class="container">
+    <div class="section-info">
+      <h2 class="section-title title-font">Blockchain custom development for business and startups</h2>
+      <span class="section-description">Since 2017 Rock’n’block developed 250+ solutions of different complexity and we are ready to bring your idea to life</span>
+      <div class="section-buttons">
+        <span class="btn btn-circle btn-red btn-border">Book A Call</span>
+        <span class="btn btn-circle btn-red btn-fill icon icon-flex icon-arrow-small">Get Started</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-areas">
+  <div class="container">
+    <div class="section-info">
+      <h2 class="section-title title-font">Areas of Expertise</h2>
+    </div>
+    <div class="areas-info">
+      <div class="areas-info-item">
+        <h3 class="title-font icon icon-areas-blockchain">Blockchain</h3>
+        <p>Secure and decentralize your systems with our custom blockchain solutions.</p>
+      </div>
+      <div class="areas-info-item">
+        <h3 class="title-font icon icon-areas-fintech">Fintech</h3>
+        <p>Build distributed, massively scalable, and fault-tolerant systems with the help of our fintech professionals.</p>
+      </div>
+      <div class="areas-info-item">
+        <h3 class="title-font icon icon-areas-software">Custom software development</h3>
+        <p>Leverage our FP expertise to deliver tailor-made software with advanced security and reliability.</p>
+      </div>
+      <div class="areas-info-item">
+        <h3 class="title-font icon icon-areas-machine-learning">Machine learning</h3>
+        <p>Improve your products with our innovative machine learning and data science solutions.</p>
+      </div>
+      <div class="areas-info-item">
+        <h3 class="title-font icon icon-areas-things">Internet of things</h3>
+        <p>Create, secure, and integrate embedded systems to build reliable IoT networks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-different">
+  <div class="container">
+    <div class="section-info">
+      <h2 class="section-title title-font">What makes us different</h2>
+    </div>
+    <div class="different-info">
+      <div class="different-info-item">
+        <h3 class="title-font icon icon-different-flash">Scientific Approach</h3>
+        <p>Our connections with academia and research labs let us leverage the latest innovations to make products that are fast, scalable, and secure.</p>
+      </div>
+      <div class="different-info-item">
+        <h3 class="title-font icon icon-different-lines">Innovative technologies</h3>
+        <p>Leverage our unique choice of technologies and approach to software development to create solutions with fewer bugs and security vulnerabilities. Save your money with software that is shipped faster and has to be maintained less frequently.</p>
+      </div>
+      <div class="different-info-item">
+        <h3 class="title-font icon icon-different-circle">Superior recruiting</h3>
+        <p>Kickstart your tech project with top-tier talent, selected through our careful hiring process that features an innovative test task and interviews with team leads.</p>
+      </div>
+      <div class="different-info-item">
+        <h3 class="title-font icon icon-different-arrow">Scientific Approach</h3>
+        <p>Our connections with academia and research labs let us leverage the latest innovations to make products that are fast, scalable, and secure.</p>
+      </div>
+      <div class="different-info-item">
+        <h3 class="title-font icon icon-different-rocket">Innovative technologies</h3>
+        <p>Leverage our unique choice of technologies and approach to software development to create solutions with fewer bugs and security vulnerabilities. Save your money with software that is shipped faster and has to be maintained less frequently.</p>
+      </div>
+      <div class="different-info-item">
+        <h3 class="title-font icon icon-different-graph">Superior recruiting</h3>
+        <p>Kickstart your tech project with top-tier talent, selected through our careful hiring process that features an innovative test task and interviews with team leads.</p>
+      </div>
+    </div>
+    <div class="different-start">
+      <div>
+        <h3 class="title-font">Build an innovative IT solution</h3>
+        <span class="different-start-text">with a team of skilled developers.</span>
+      </div>
+      <span class="btn btn-blue btn-circle btn-fill icon icon-rocket">Get Started</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-process">
+  <div class="container">
+    <div class="section-info">
+      <h2 class="section-title title-font">Our process</h2>
+      <span class="section-description">With our streamlined software development process, we are able to build extraordinary products within ordinary timescales.</span>
+    </div>
+    <div class="process-info">
+      <div class="process-info-item icon icon-arrow-long">
+        <h3 class="title-font" data-count="01.">Research</h3>
+        <ul>
+          <li>Idea</li>
+          <li>Requirements</li>
+          <li>Technical audit</li>
+        </ul>
+      </div>
+      <div class="process-info-item icon icon-arrow-long">
+        <h3 class="title-font" data-count="02.">Development</h3>
+        <ul>
+          <li>Minimum viable product</li>
+          <li>Backend development</li>
+          <li>Frontend development</li>
+        </ul>
+      </div>
+      <div class="process-info-item">
+        <h3 class="title-font" data-count="03.">Launch</h3>
+        <ul>
+          <li>Infrastructure</li>
+          <li>Release</li>
+          <li>Post-release support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <span class="btn btn-red btn-fill btn-circle btn-center icon icon-flex icon-arrow-small">See How We Work</span>
+</section>
+
+<section class="section section-technologies">
+  <div class="container">
+    <div class="section-info">
+      <h2 class="section-title title-font">Technologies</h2>
+      <span class="section-description">Our stack consists of languages that are productive, reliable, and scalable. Discover how they can help build better software.</span>
+    </div>
+    <div class="technologies-info">
+      <div *ngFor="let technology of technologies; let i = index" class="technologies-info-item" [ngClass]="{ active: technologyID === i }">
+        <span [attr.class]="'icon icon-technologies-' + technology.icon" (click)="technologyID = technologyID !== i ? i : null"></span>
+        <h3 class="title-font">{{ technology.title }}</h3>
+        <p>{{ technology.text }}</p>
+      </div>
+    </div>
+    <p class="section-technologies-text">Choose the correct tool for the job. No matter what field you’re in, we’ll find technologies that will create a lasting advantage.</p>
+  </div>
+</section>
+
+<section class="section section-case">
+  <div class="container">
+    <div class="section-info">
+      <h2 class="section-title title-font">Case Studies</h2>
+    </div>
+    <div class="case-info">
+      <div class="case-info-select">
+        <span class="btn icon icon-arrow-circle-left" (click)="changeSlide('prev')"></span>
+        <span class="case-info-select-title title-font">{{ caseTitle }}</span>
+        <span class="btn icon icon-arrow-circle-right" (click)="changeSlide('next')"></span>
+      </div>
+      <div class="case-info-content-wrap">
+        <div [@routeAnimations]="caseID">
+          <ng-container *ngFor="let case of cases; let i = index">
+            <div class="case-info-content" *ngIf="caseID === i">
+              <div class="case-info-content-description">
+                <img [src]="'assets/img/case/' + case.name + '/icon.svg'" [alt]="case.name" />
+                <div class="case-info-content-description-block">
+                  <h3 class="title-font">{{ case.title }}</h3>
+                  <a *ngIf="case.link.show" [attr.href]="case.link.url" target="_blank">{{ case.link.title }}</a>
+                </div>
+                <p>{{ case.text }}</p>
+              </div>
+              <div class="case-info-content-images">
+                <img *ngFor="let item of case.images" [src]="'assets/img/case/' + case.name + '/' + case.name + '-' + item + '.png'" [alt]="case.title" />
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-partners">
+  <div class="container">
+    <div class="section-info">
+      <h2 class="section-title title-font">Our partners</h2>
+    </div>
+    <div class="partners-info">
+      <a *ngFor="let partner of partners" target="_blank" href="#" [attr.class]="'icon icon-partner-' + partner"></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-form">
+  <div class="container">
+    <div class="section-info">
+      <h2 class="section-title title-font">Feel free to ping for any reason</h2>
+      <span class="section-description">
+        Our stack consists of languages that are productive, reliable, and scalable.
+        <br />
+        Discover how they can help build better software.
+      </span>
+    </div>
+
+    <form class="contact-form">
+      <div class="contact-form-group"><input required class="title-font" type="email" placeholder="Email" /></div>
+      <div class="contact-form-group"><input required class="title-font" type="text" placeholder="Telegram / WhatsApp" /></div>
+      <div class="contact-form-group"><textarea cols="0" required class="title-font" type="text" placeholder="Message"></textarea></div>
+      <button class="button btn btn-blue btn-circle btn-center btn-fill">Get free consultation</button>
+    </form>
+  </div>
+</section>

@@ -1,11 +1,23 @@
 @import './mixins.scss';
 
-@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-Thin', 100);
-@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-ExtraLight', 200);
-@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-Light', 300);
-@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-Regular', normal);
-@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-Medium', 500);
-@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-Bold', 600);
-@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-SemiBold', 700);
-@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-Black', 800);
-@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-ExtraBold', 900);
+// TTCommons
+@include font-face('TTCommons', '/assets/fonts/TTCommons/TTCommons-Thin', 100);
+@include font-face('TTCommons', '/assets/fonts/TTCommons/TTCommons-ExtraLight', 200);
+@include font-face('TTCommons', '/assets/fonts/TTCommons/TTCommons-Light', 300);
+@include font-face('TTCommons', '/assets/fonts/TTCommons/TTCommons-Regular', normal);
+@include font-face('TTCommons', '/assets/fonts/TTCommons/TTCommons-Medium', 500);
+@include font-face('TTCommons', '/assets/fonts/TTCommons/TTCommons-Bold', 600);
+@include font-face('TTCommons', '/assets/fonts/TTCommons/TTCommons-DemiBold', 700);
+@include font-face('TTCommons', '/assets/fonts/TTCommons/TTCommons-Black', 800);
+@include font-face('TTCommons', '/assets/fonts/TTCommons/TTCommons-ExtraBold', 900);
+
+// TTNorms
+@include font-face('TTNorms', '/assets/fonts/TTNorms/TTNorms-Thin', 100);
+@include font-face('TTNorms', '/assets/fonts/TTNorms/TTNorms-ExtraLight', 200);
+@include font-face('TTNorms', '/assets/fonts/TTNorms/TTNorms-Light', 300);
+@include font-face('TTNorms', '/assets/fonts/TTNorms/TTNorms-Regular', normal);
+@include font-face('TTNorms', '/assets/fonts/TTNorms/TTNorms-Medium', 500);
+@include font-face('TTNorms', '/assets/fonts/TTNorms/TTNorms-Bold', 600);
+// @include font-face('TTNorms', '/assets/fonts/TTNorms/TTNorms-DemiBold', 700);
+@include font-face('TTNorms', '/assets/fonts/TTNorms/TTNorms-Black', 800);
+@include font-face('TTNorms', '/assets/fonts/TTNorms/TTNorms-ExtraBold', 900);

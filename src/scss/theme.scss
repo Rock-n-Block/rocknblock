@@ -1,31 +1,43 @@
 // default theme (white)
 :root {
-  --body-background-color: #f3f3f3;
+  --body-background-color: #1d1b21;
+
+  --section-title-color: linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%);
+  --section-title-description: #ffffff;
 
   --header-background-color: #ffffff;
   --header-box-shadow: 0px 4px 25px rgba(211, 224, 219, 0.25);
 
-  --section-title-color: #59bfa4;
+  --icon-arrow-long-background-color: #ffffff;
 
-  --icon-coins-gray-background-color: #979797;
-  --icon-coins-green-background-color: #59bfa4;
-  --icon-info-gray-background-color: #b0b0b0;
-  --icon-info-orange-background-color: #ec8c50;
+  --icon-areas-blockchain-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+  --icon-areas-fintech-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+  --icon-areas-software-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+  --icon-areas-things-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+  --icon-areas-machine-learning-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+
+  --icon-areas-background-hover: linear-gradient(0deg, #c35330 0%, #fab7a2 47.33%, #f4673b 100%);
 }
 
 //dark theme
 #dark {
   body {
-    --body-background-color: #f3f3f3;
+    --body-background-color: #1d1b21;
+
+    --section-title-color: linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%);
+    --section-title-description: #ffffff;
 
     --header-background-color: #ffffff;
     --header-box-shadow: 0px 4px 25px rgba(211, 224, 219, 0.25);
 
-    --section-title-color: #59bfa4;
+    --icon-arrow-long-background-color: #ffffff;
 
-    --icon-coins-gray-background-color: #979797;
-    --icon-coins-green-background-color: #59bfa4;
-    --icon-info-gray-background-color: #b0b0b0;
-    --icon-info-orange-background-color: #ec8c50;
+    --icon-areas-blockchain-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+    --icon-areas-fintech-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+    --icon-areas-software-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+    --icon-areas-things-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+    --icon-areas-machine-learning-background: linear-gradient(0deg, #7f85a8 0%, #6b6b8b 100%);
+
+    --icon-areas-background-hover: linear-gradient(0deg, #c35330 0%, #fab7a2 47.33%, #f4673b 100%);
   }
 }
