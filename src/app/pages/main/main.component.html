@@ -151,7 +151,7 @@
           <ng-container *ngFor="let case of cases; let i = index">
             <div class="case-info-content" *ngIf="caseID === i">
               <div class="case-info-content-description">
-                <img [src]="'assets/img/case/' + case.name + '/icon.svg'" [alt]="case.name" />
+                <img [src]="'assets/img/case/' + case.name + '/icon.png'" [alt]="case.name" />
                 <div class="case-info-content-description-block">
                   <h3 class="title-font">{{ case.title }}</h3>
                   <a *ngIf="case.link.show" [attr.href]="case.link.url" target="_blank">{{ case.link.title }}</a>
