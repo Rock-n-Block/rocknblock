@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { slider } from './slider';
 
 @Component({
@@ -105,8 +105,10 @@ export class MainComponent implements OnInit {
 
   public partners = ['axion', 'binence', 'bw', 'changelly', 'ducatus', 'enq', 'eos', 'lancor', 'neo', 'okex', 'quras', 'rsk', 'teambrella', 'tron', 'waves'];
 
-  constructor(private metaTagService: Meta) {
-    this.metaTagService.addTags([{ name: 'keywords', content: 'Angular SEO Integration, Music CRUD, Angular Universal' }, { name: 'robots', content: 'index, follow' }, { name: 'author', content: 'Digamber Singh' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { name: 'date', content: '2019-10-31', scheme: 'YYYY-MM-DD' }, { charset: 'UTF-8' }]);
+  constructor(private metaTagService: Meta, private titleService: Title) {
+    this.titleService.setTitle('Rock`n`Block');
+    this.metaTagService.addTags([{ name: 'keywords', content: 'Blockchain, Rocknblock, Wallets, Crypto, Cryptocurrency, DeFi' }, { name: 'robots', content: 'index, follow' }, { name: 'author', content: 'Amary Filo' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { name: 'date', content: '20121-03-05', scheme: 'YYYY-MM-DD' }, { charset: 'UTF-8' }]);
+    this.metaTagService.updateTag({ name: 'description', content: 'Blockchain custom development for business and startups' });
 
     this.caseTitle = this.cases[this.caseID].title;
   }
