@@ -12,6 +12,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -128,6 +129,10 @@ header {
 footer {
   margin-top: 150px;
   padding-bottom: 30px;
+
+  @include b(600) {
+    margin-top: 50px;
+  }
 
   .container {
     display: grid;
@@ -303,6 +308,13 @@ footer {
       // padding: 100px 0 100px 15px;
       padding: 100px 0 150px 15px;
       max-width: 1400px;
+
+      @include b(600) {
+        //   background: url(head-bg-main-1.svg) 28% center no-repeat, url(head-bg-smooth.svg) 90% 100% no-repeat, url(head-bg-main-2.svg) 90% 60% no-repeat, url(head-bg-main-3.svg) 5% 70% no-repeat, url(head-bg-2.svg) 90% top no-repeat, url(head-bg-3.svg) 20% bottom no-repeat, url(head-bg-4.svg) right 80% no-repeat;
+        background-size: 50%, 10%, 50%, 50%, 10%, 10%, 20%;
+
+        padding: 20px 15px 20px 15px;
+      }
     }
 
     .section {
@@ -313,10 +325,13 @@ footer {
       }
 
       &-title {
-        font-size: 60px;
+        font-size: 66px;
+        line-height: 1.1;
+        font-family: 'TTCommons';
+        font-weight: 700;
 
         @include b(600) {
-          font-size: 40px;
+          font-size: 30px;
           text-align: center;
         }
       }
@@ -405,7 +420,7 @@ footer {
         min-height: 300px;
 
         @include b(700) {
-          min-width: 300px;
+          min-width: 280px;
           margin-right: 15px;
         }
 
@@ -577,7 +592,7 @@ footer {
 
     .process-info {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       justify-content: space-between;
       grid-gap: 15px;
       margin-top: 100px;
@@ -673,6 +688,21 @@ footer {
   }
 
   &-technologies {
+    .technologies-desctop {
+      @include b(550) {
+        display: none !important;
+      }
+    }
+
+    .technologies-mobile {
+      display: none !important;
+      min-height: 190px;
+
+      @include b(550) {
+        display: block !important;
+      }
+    }
+
     .technologies-info {
       display: flex;
       justify-content: space-between;
@@ -713,9 +743,10 @@ footer {
         &.active {
           background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #2c2c33;
           box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.3);
-          max-width: 315px;
+          max-width: 310px;
           width: 100%;
-          min-height: 315px;
+          min-height: 270px;
+          padding: 50px 15px;
 
           @include b(550) {
             max-width: 100%;
@@ -744,10 +775,48 @@ footer {
         }
 
         p {
-          font-size: 16px;
-          line-height: 24px;
+          text-align: center;
+          // display: inline-block;
+          line-height: 1.2;
           color: #ffffff;
-          opacity: 0.5;
+          font-weight: bold;
+          font-size: 18px;
+          margin-top: 30px;
+        }
+
+        .icon {
+          &:before {
+            margin: 0 auto;
+          }
+        }
+      }
+
+      &-select {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btn {
+          &:before {
+            margin: 0;
+          }
+        }
+      }
+
+      &-content {
+        &-wrap {
+          position: relative;
+        }
+
+        &-item {
+          p {
+            text-align: center;
+            line-height: 1.2;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 40px;
+          }
         }
       }
     }
@@ -759,8 +828,12 @@ footer {
       margin: 0 auto;
       font-size: 20px;
       text-align: center;
-
       color: #ffffff;
+
+      @include b(550) {
+        font-size: 20px;
+        opacity: 0.5;
+      }
     }
   }
 
@@ -964,35 +1037,44 @@ footer {
         }
 
         &-images {
+          // display: flex;
+          // justify-content: space-between;
+
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
+          align-items: flex-start;
+          overflow-x: scroll;
 
-          @include b(1250) {
-            justify-content: space-around;
-          }
+          // @include b(1250) {
+          //   justify-content: space-around;
+          // }
 
-          @include b(1000) {
-            justify-content: center;
-          }
+          // @include b(1000) {
+          //   justify-content: center;
+          // }
 
-          @include b(550) {
-            // justify-content: space-between;
-            justify-content: flex-start;
-            overflow-x: scroll;
-          }
+          // @include b(550) {
+          //   // justify-content: space-between;
+          //   justify-content: flex-start;
+          //   overflow-x: scroll;
+          // }
 
           img {
-            max-width: 265px;
+            // max-width: 265px;
+            width: 100%;
+            max-height: 700px;
+            height: auto;
+            margin-right: 20px;
 
-            @include b(750) {
-              max-width: 185px;
-            }
+            // @include b(750) {
+            //   max-width: 185px;
+            // }
 
             @include b(550) {
+              margin-right: 10px;
               max-width: 27vw;
               max-width: 70%;
               min-height: 100%;
-              margin-right: 10px;
             }
 
             &:nth-child(2) {
@@ -1078,6 +1160,7 @@ footer {
           width: 100%;
           height: 100%;
           -webkit-mask-position: center;
+          mask-position: center;
 
           @include b(550) {
             -webkit-mask-size: 70%;

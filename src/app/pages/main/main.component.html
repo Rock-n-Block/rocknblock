@@ -4,8 +4,8 @@
       <h2 class="section-title title-font">Blockchain custom development for business and startups</h2>
       <span class="section-description">Since 2017 Rock’n’block developed 250+ solutions of different complexity and we are ready to bring your idea to life</span>
       <div class="section-buttons">
-        <span class="btn btn-circle btn-orange btn-border">Book A Call</span>
-        <span class="btn btn-circle btn-orange btn-fill icon icon-flex icon-arrow-small">Get Started</span>
+        <!-- <span class="btn btn-circle btn-orange btn-border">Book A Call</span> -->
+        <a href="#contactus" class="btn btn-circle btn-orange btn-fill icon icon-flex icon-arrow-small">Get Started</a>
       </div>
     </div>
   </div>
@@ -80,7 +80,7 @@
         <h3 class="title-font">Build an innovative IT solution</h3>
         <span class="different-start-text">with a team of skilled developers.</span>
       </div>
-      <span class="btn btn-orange btn-circle btn-fill icon icon-rocket">Get Started</span>
+      <a href="#contactus" class="btn btn-orange btn-circle btn-fill icon icon-rocket">Get Started</a>
     </div>
   </div>
 </section>
@@ -118,22 +118,40 @@
       </div>
     </div>
   </div>
-  <span class="btn btn-orange btn-fill btn-circle btn-center icon icon-flex icon-arrow-small">See How We Work</span>
+  <!-- <span class="btn btn-orange btn-fill btn-circle btn-center icon icon-flex icon-arrow-small">See How We Work</span> -->
 </section>
 
 <section class="section section-technologies">
   <div class="container">
     <div class="section-info">
       <h2 class="section-title title-font">Technologies</h2>
-      <span class="section-description">Our stack consists of languages that are productive, reliable, and scalable. Discover how they can help build better software.</span>
+      <span class="section-description">We are ready to take on a blockchain project of any complexity, from the stage of developing an idea to the final implementation. Here are the most popular requests we receive regularly:</span>
     </div>
-    <div class="technologies-info">
+
+    <div class="technologies-info technologies-desctop">
       <div *ngFor="let technology of technologies; let i = index" class="technologies-info-item" [ngClass]="{ active: technologyID === i }">
-        <span [attr.class]="'icon icon-technologies-' + technology.icon" (click)="technologyID = technologyID !== i ? i : null"></span>
-        <h3 class="title-font">{{ technology.title }}</h3>
+        <span [attr.class]="'icon icon-tech-' + technology.icon" (click)="technologyID = technologyID !== i ? i : null"></span>
         <p>{{ technology.text }}</p>
       </div>
     </div>
+
+    <div class="technologies-info technologies-mobile">
+      <div class="technologies-info-select">
+        <span class="btn icon icon-arrow-circle-left" (click)="changeTech('prev')"></span>
+        <span [attr.class]="'icon icon-tech-' + techSelect"></span>
+        <span class="btn icon icon-arrow-circle-right" (click)="changeTech('next')"></span>
+      </div>
+      <div class="technologies-info-content-wrap">
+        <div [@routeAnimations]="techID">
+          <ng-container *ngFor="let tech of technologies; let i = index">
+            <div class="technologies-info-content-item" *ngIf="techID === i">
+              <p>{{ tech.text }}</p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
     <p class="section-technologies-text">Choose the correct tool for the job. No matter what field you’re in, we’ll find technologies that will create a lasting advantage.</p>
   </div>
 </section>
@@ -159,7 +177,7 @@
                   <h3 class="title-font">{{ case.title }}</h3>
                   <a *ngIf="case.link.show" [attr.href]="case.link.url" target="_blank">{{ case.link.title }}</a>
                 </div>
-                <p>{{ case.text }}</p>
+                <p [innerHTML]="case.text"></p>
               </div>
               <div class="case-info-content-images">
                 <img *ngFor="let item of case.images" [src]="'assets/img/case/' + case.name + '/' + case.name + '-' + item + '.png'" [alt]="case.title" />
@@ -183,7 +201,7 @@
   </div>
 </section>
 
-<section class="section section-form">
+<section id="contactus" class="section section-form">
   <div class="container">
     <div class="section-info">
       <h2 class="section-title title-font">Feel free to ping for any reason</h2>
@@ -197,7 +215,7 @@
     <form class="contact-form">
       <div class="contact-form-group"><input required class="title-font" type="email" placeholder="Email" /></div>
       <div class="contact-form-group"><input required class="title-font" type="text" placeholder="Telegram / WhatsApp" /></div>
-      <div class="contact-form-group"><textarea cols="0" required class="title-font" type="text" placeholder="Message"></textarea></div>
+      <div class="contact-form-group"><input required class="title-font" type="text" placeholder="Message" /></div>
       <button class="button btn btn-orange btn-circle btn-center btn-fill">Get free consultation</button>
     </form>
   </div>

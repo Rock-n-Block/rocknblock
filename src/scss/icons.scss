@@ -18,8 +18,15 @@ $scheme-icons: (
   ('technologies-snow', 'technologies-snow', 'svg'),
   ('technologies-typescript', 'technologies-typescript', 'svg'),
   ('technologies-x', 'technologies-x', 'svg'),
-  ('arrow-small', 'arrow-small', 'svg')
+  ('arrow-small', 'arrow-small', 'svg'),
+  ('tech-dapp-develop', 'tech-dapp-develop', 'svg'),
+  ('tech-investment', 'tech-investment', 'svg'),
+  ('tech-mobile-develop', 'tech-mobile-develop', 'svg'),
+  ('tech-smart-contract', 'tech-smart-contract', 'svg'),
+  ('tech-technical', 'tech-technical', 'svg'),
+  ('tech-testing-develop', 'tech-testing-develop', 'svg')
 );
+
 $scheme-icons-mask: (
   ('arrow-long', 'arrow-long', 'svg'),
   ('areas-blockchain', 'areas-blockchain', 'svg'),
@@ -111,6 +118,39 @@ $scheme-icons-mask: (
   &-arrow-small {
     @include before-img(block, 30px, 16px, r) {
       background-size: cover;
+    }
+  }
+
+  &-tech {
+    &-dapp-develop {
+      @include before-img(block, 70px, 70px, r) {
+        background-size: contain;
+      }
+    }
+    &-investment {
+      @include before-img(block, 70px, 70px, r) {
+        background-size: contain;
+      }
+    }
+    &-mobile-develop {
+      @include before-img(block, 70px, 70px, r) {
+        background-size: contain;
+      }
+    }
+    &-smart-contract {
+      @include before-img(block, 70px, 70px, r) {
+        background-size: contain;
+      }
+    }
+    &-technical {
+      @include before-img(block, 70px, 70px, r) {
+        background-size: contain;
+      }
+    }
+    &-testing-develop {
+      @include before-img(block, 70px, 70px, r) {
+        background-size: contain;
+      }
     }
   }
 
